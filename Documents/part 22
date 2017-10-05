@@ -1,0 +1,5 @@
+using migrations to add information to the table
+
+use "doctrine/dbal": "*" in composer and update for running down migration
+
+need to index the column: slug. search is much faster
