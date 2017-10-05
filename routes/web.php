@@ -20,9 +20,12 @@ Route::get('/contact', 'PagesController@getContact'); //this is the get request
 
 Route::get('/about', 'PagesController@getAbout');
 
-Route::get('/', function () {
-  return view('pages.welcome');
-});
+Route::get('/', 'PagesController@getIndex');
+
+// following statement doesnt connect the controller by default
+// Route::get('/', function () {
+//   return view('pages.welcome');
+// });
 
 // this is all part of the post e.g. post/<function name>
 Route::resource('posts','PostController');
