@@ -1,0 +1,120 @@
+following are the commands ran in part 10
+
+gautam@gautam-K55VD:~$ cd www/blog/
+gautam@gautam-K55VD:~/www/blog$ php artisan server
+
+                                                                  
+  [Symfony\Component\Console\Exception\CommandNotFoundException]  
+  Command "server" is not defined.                                
+  Did you mean this?                                              
+      serve                                                       
+                                                                  
+
+gautam@gautam-K55VD:~/www/blog$ php artisan serve
+Laravel development server started: <http://127.0.0.1:8000>
+^C
+gautam@gautam-K55VD:~/www/blog$ php artisan make:model Post --migrationModel created successfully.
+Created Migration: 2017_09_28_103712_create_posts_table
+gautam@gautam-K55VD:~/www/blog$ which phpmyadmin
+gautam@gautam-K55VD:~/www/blog$ where phpmyadmin
+No command 'where' found, did you mean:
+ Command 'gwhere' from package 'gwhere' (universe)
+where: command not found
+gautam@gautam-K55VD:~/www/blog$ cd ..
+gautam@gautam-K55VD:~/www$ ln -s /usr/share/phpmyadmin/ phpmyadmin/
+ln: target 'phpmyadmin/' is not a directory: No such file or directory
+gautam@gautam-K55VD:~/www$ ln -s /usr/share/phpmyadmin/ phpmyadmin
+gautam@gautam-K55VD:~/www$ ls
+blog  index.html  iskcon-website  phpmyadmin  test
+gautam@gautam-K55VD:~/www$ cd blog/
+gautam@gautam-K55VD:~/www/blog$ php artisan migrate
+Migration table created successfully.
+Migrating: 2014_10_12_000000_create_users_table
+Migrated:  2014_10_12_000000_create_users_table
+Migrating: 2014_10_12_100000_create_password_resets_table
+Migrated:  2014_10_12_100000_create_password_resets_table
+Migrating: 2017_09_28_103712_create_posts_table
+Migrated:  2017_09_28_103712_create_posts_table
+gautam@gautam-K55VD:~/www/blog$ php artisan maake:controller PostController --resource
+
+                                                                  
+  [Symfony\Component\Console\Exception\CommandNotFoundException]  
+  There are no commands defined in the "maake" namespace.         
+  Did you mean this?                                              
+      make                                                        
+                                                                  
+
+gautam@gautam-K55VD:~/www/blog$ php artisan make:controller PostController --resource
+Controller created successfully.
+gautam@gautam-K55VD:~/www/blog$ php artisan routes:list
+
+                                                           
+  [Symfony\Component\Debug\Exception\FatalThrowableError]  
+  Call to undefined function resource()                    
+                                                           
+
+gautam@gautam-K55VD:~/www/blog$ php artisan route:list
+
+                                                           
+  [Symfony\Component\Debug\Exception\FatalThrowableError]  
+  Call to undefined function resource()                    
+                                                           
+
+gautam@gautam-K55VD:~/www/blog$ php artisan routes
+
+                                                           
+  [Symfony\Component\Debug\Exception\FatalThrowableError]  
+  Call to undefined function resource()                    
+                                                           
+
+gautam@gautam-K55VD:~/www/blog$ php artisan route
+
+                                                           
+  [Symfony\Component\Debug\Exception\FatalThrowableError]  
+  Call to undefined function resource()                    
+                                                           
+
+gautam@gautam-K55VD:~/www/blog$ php artisan routes
+
+                                                           
+  [Symfony\Component\Debug\Exception\FatalThrowableError]  
+  Call to undefined function resource()                    
+                                                           
+
+gautam@gautam-K55VD:~/www/blog$ php artisan route:list
+
+                                                           
+  [Symfony\Component\Debug\Exception\FatalThrowableError]  
+  Call to undefined function resource()                    
+                                                           
+
+gautam@gautam-K55VD:~/www/blog$ ^C
+gautam@gautam-K55VD:~/www/blog$ php artisan route:list
++--------+----------+----------+------+-------------------------------------------------+--------------+
+| Domain | Method   | URI      | Name | Action                                          | Middleware   |
++--------+----------+----------+------+-------------------------------------------------+--------------+
+|        | GET|HEAD | /        |      | Closure                                         | web          |
+|        | GET|HEAD | about    |      | App\Http\Controllers\PagesController@getAbout   | web          |
+|        | GET|HEAD | api/user |      | Closure                                         | api,auth:api |
+|        | GET|HEAD | contact  |      | App\Http\Controllers\PagesController@getContact | web          |
+|        | GET|HEAD | template |      | Closure                                         | web          |
++--------+----------+----------+------+-------------------------------------------------+--------------+
+gautam@gautam-K55VD:~/www/blog$ php artisan route:list
++--------+-----------+-------------------+---------------+-------------------------------------------------+--------------+
+| Domain | Method    | URI               | Name          | Action                                          | Middleware   |
++--------+-----------+-------------------+---------------+-------------------------------------------------+--------------+
+|        | GET|HEAD  | /                 |               | Closure                                         | web          |
+|        | GET|HEAD  | about             |               | App\Http\Controllers\PagesController@getAbout   | web          |
+|        | GET|HEAD  | api/user          |               | Closure                                         | api,auth:api |
+|        | GET|HEAD  | contact           |               | App\Http\Controllers\PagesController@getContact | web          |
+|        | GET|HEAD  | posts             | posts.index   | App\Http\Controllers\PostController@index       | web          |
+|        | POST      | posts             | posts.store   | App\Http\Controllers\PostController@store       | web          |
+|        | GET|HEAD  | posts/create      | posts.create  | App\Http\Controllers\PostController@create      | web          |
+|        | GET|HEAD  | posts/{post}      | posts.show    | App\Http\Controllers\PostController@show        | web          |
+|        | PUT|PATCH | posts/{post}      | posts.update  | App\Http\Controllers\PostController@update      | web          |
+|        | DELETE    | posts/{post}      | posts.destroy | App\Http\Controllers\PostController@destroy     | web          |
+|        | GET|HEAD  | posts/{post}/edit | posts.edit    | App\Http\Controllers\PostController@edit        | web          |
+|        | GET|HEAD  | template          |               | Closure                                         | web          |
++--------+-----------+-------------------+---------------+-------------------------------------------------+--------------+
+gautam@gautam-K55VD:~/www/blog$ 
+

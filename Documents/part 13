@@ -1,0 +1,14 @@
+part 13
+
+displaying messages using flash message and not sessions.
+flash messages are temporary which last for only one session.
+sessions have to be included into the file; (use Sessions;) in the head.
+blade supports if conditions 
+
+https://laravel.com/docs/5.5/routing#route-group-middleware
+says that routes are assigned the web middleware group, which provides features like session state and CSRF protection. so no need to work with application routes and all that video time: 20:11.
+
+laravel automatically flash messsages in case of errors. message is called error
+
+video part to catch errors might not work in laaravel 5.5
+use https://laravel.com/docs/5.5/validation this is very powerful feature of laravel 5.5. If data is submitted via form the validate function automatically redirects on the failure to previous location and errors are flashed on that page. whereas if one is validating an ajax request using this function the it doesnt redirect but sends a JSON response to the client.
